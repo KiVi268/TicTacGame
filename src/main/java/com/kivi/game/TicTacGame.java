@@ -3,8 +3,9 @@ package com.kivi.game;
 import java.util.Scanner;
 
 public class TicTacGame {
-    private enum CellValue { X, O, EMPTY };
-    private CellValue[][] board;
+    private enum CellValue {X, O, EMPTY}
+
+    private final CellValue[][] board;
     private boolean isXTurn;
 
     public TicTacGame() {
@@ -21,9 +22,15 @@ public class TicTacGame {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 switch (board[i][j]) {
-                    case X: System.out.print(" X "); break;
-                    case O: System.out.print(" O "); break;
-                    case EMPTY: System.out.print(" - "); break;
+                    case X:
+                        System.out.print(" X ");
+                        break;
+                    case O:
+                        System.out.print(" O ");
+                        break;
+                    case EMPTY:
+                        System.out.print(" - ");
+                        break;
                 }
                 if (j < 2) System.out.print("|");
             }
@@ -41,9 +48,7 @@ public class TicTacGame {
         }
         if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
             return true;
-        if (board[0][2] == player && board[1][1] == player && board[2][0] == player)
-            return true;
-        return false;
+        return board[0][2] == player && board[1][1] == player && board[2][0] == player;
     }
 
     private boolean isBoardFull() {
