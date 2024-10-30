@@ -1,10 +1,10 @@
 package com.kivi;
 
-import com.kivi.game.TikTakGame;
+import com.kivi.game.TicTacGame;
 
 public class Main {
     public static void main(String[] args) {
-        TikTakGame game = new TikTakGame();
+        TicTacGame game = new TicTacGame();
         game.startGame();
     }
 }

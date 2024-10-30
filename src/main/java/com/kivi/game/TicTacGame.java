@@ -2,12 +2,12 @@ package com.kivi.game;
 
 import java.util.Scanner;
 
-public class TikTakGame {
+public class TicTacGame {
     private enum CellValue { X, O, EMPTY };
     private CellValue[][] board;
     private boolean isXTurn;
 
-    public TikTakGame() {
+    public TicTacGame() {
         board = new CellValue[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
